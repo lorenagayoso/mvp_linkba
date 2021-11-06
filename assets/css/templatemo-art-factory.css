@@ -1624,3 +1624,13 @@ justify-content: space-evenly;
   border-radius: 20px;
   padding: 12px 20px;
 }
+
+#pricing-h5{
+  color: white;
+  margin-left: 50%;
+  margin-bottom: 5%;
+}
+
+#pricing-h5 h5{
+font-size: xx-large;
+}

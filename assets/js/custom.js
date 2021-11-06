@@ -339,3 +339,7 @@ let url_input = document.querySelector("input[name='url']").value;
 
 document.getElementById("utm_result").getElementsByTagName("p")[0].innerText = url_input + random(5)
 }
+
+function tour_start() {
+introJs().start();
+}

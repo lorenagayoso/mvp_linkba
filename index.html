@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="Template Mo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://unpkg.com/intro.js/minified/introjs.min.css" rel="stylesheet">
+
 
     <title>LINKBA | MVP</title>
 <!--
@@ -22,7 +24,6 @@ https://templatemo.com/tm-537-art-factory
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="assets/css/templatemo-art-factory.css">
     <link rel="stylesheet" type="text/css" href="assets/css/owl-carousel.css">
-
     </head>
     
     <body>
@@ -146,7 +147,7 @@ https://templatemo.com/tm-537-art-factory
                             <img src="assets/images/about-icon-03.png" alt="">
                             <div class="text">
                                 <h6>Conveniencia</h6>
-                                <p>Contamos con herramientas como el auto-save, tu propio repositorio de parámetros y un aucorrector para ayudarte con la construcción de utms</p>
+                                <p>Una vez optimizas tu enlace, LINKBA automáticamente corrige las mayúsculas, reemplaza espacios y acorta la url para que no tengas problemas con el seguimiento.</p>
                             </div>
                         </li>
                     </ul>
@@ -167,24 +168,25 @@ https://templatemo.com/tm-537-art-factory
 <div id="builder-title">
 <h5>Probá LinkBa</h5></div>
         <div class="accordion-text">
-        <button id="builder" class="main-button builder"><strong>¿Cómo comenzar?</strong></button>
+
+        <button id="builder" class="main-button builder"><a class="main-button-slider" style="color:white;" onclick="tour_start()" target="_blank" ><strong>¿Cómo comenzar?</strong></a></button>
         </div>       
 <form>
   <label for="url">URL</label>
-  <input type="url" required placeholder = "Ingresa la URL completa (Ejemplo: https://www.misitio.com)" id="url" name="url"><br>
+  <input type="url" required id="url" name="url" data-title="1.Ingresa la URL absoluta" data-intro="Ejemplo: https://www.misitio.com"><br>
   <label for="source">Fuente</label>
-  <input type="text" required placeholder = "Ingresa la fuente referente (Ejemplo: Instagram)" id="source" name="source"><br>
+  <input type="text" required data-title="2.Ingresa la fuente referente" data-intro="Ejemplo: Instagram/Facebook/Linkedin" id="source" name="source"><br>
   <label for="medium">Medio</label>
-  <input type="text" required placeholder = "Ingresa el medio referente (Ejemplo: Stories/Feed)" id="medium" name="medium"><br>
+  <input type="text" required data-title="3.Ingresa el medio referente" data-intro="Ejemplo: feed/stories"  id="medium" name="medium"><br>
   <label for="campaign">Campaña</label>
-  <input type="text" placeholder = "Ingresa la fuente de tu campaña (Ejemplo: Verano_2021)" id="campaign" name="campaign"><br>
+  <input type="text" data-title="3.Ingresa el nombre de tu campaña" data-intro="Ejemplo: verano 2021/branded kws" id="campaign" name="campaign"><br>
   <label for="term">Término</label>
-  <input type="text" placeholder = "Ingresa un término descriptivo adicional" id="term" name="term"><br>
+  <input type="text" data-title="4.Ingresa una palabra clave asociada a tu campaña" data-intro="Este campo es opcional y no necesario para campañas en Google Ads" id="term" name="term"><br>
   <label for="content">Contenido</label>
-  <input type="content" placeholder = "Ingresa un término descriptivo adicional" id="content" name="content"><br>
+  <input type="content" data-title="5.Ingresa una descripción adicional a tu enlace" data-intro="Ejemplo: Versión del anuncio que quieres probar." id="content" name="content"><br>
 </form>
 <div id="btn-builder-container">
-<button id="builder" onclick = "builder_submit()" class="main-button builder"><strong>BUILD!</strong></button>
+<button id="builder" data-title="6.Optimiza tu enlace" data-intro="No preocupes! Si surge algún error, te lo haremos saber" onclick = "builder_submit()" class="main-button builder"><strong>BUILD!</strong></button>
 </div>
 <div id="utm_result" style="display:none;">
 <p>Aqui veras tu enlace optimizado</p>
@@ -209,12 +211,12 @@ https://templatemo.com/tm-537-art-factory
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
-                        <h2>Frequently Asked Questions</h2>
+                        <h2>Pregunstas frecuentes</h2>
                     </div>
                 </div>
                 <div class="offset-lg-3 col-lg-6">
                     <div class="section-heading">
-                        <p>Vivamus venenatis eu mi ac mattis. Maecenas ut elementum sapien. Nunc euismod risus ac lobortis congue. Sed erat quam.</p>
+                        <p> Entendemos que tengas consultas,  por eso hemos agrupado las preguntas que más recibimos de nuestros usuarios. <strong>Si no encuentras una respuesta aquí siempre puedes escribirnos a support@linkba.com</strong> </p>
                     </div>
                 </div>
             </div>
@@ -330,31 +332,40 @@ https://templatemo.com/tm-537-art-factory
         <!-- ***** PRICING START ***** -->
     <section class="section" id="services">
         <div class="container">
+            <div id="pricing-h5">
+            <h5 class="service-title">PRICING</h5>
+            </div>
             <div class="row">
                 <div class="owl-carousel owl-theme">
                     <div class="item service-item">
                         <div class="icon">
                             <i><img src="assets/images/service-icon-01.png" alt=""></i>
                         </div>
-                        <h5 class="service-title">First Box Service</h5>
+                        <h5 class="service-title">FREE</h5>
+                        <h5 class="service-title">$0/mes</h5>
+                        <h5 class="service-title">(Gratis hoy y siempre)</h5>
                         <p>Aenean vulputate massa sed neque consectetur, ac fringilla quam aliquet. Sed a enim nec eros tempor cursus at id libero.</p>
-                        <a href="#" class="main-button">Read More</a>
+                        <a href="#" class="main-button">START TRIAL</a>
                     </div>
                     <div class="item service-item">
                         <div class="icon">
                             <i><img src="assets/images/service-icon-02.png" alt=""></i>
                         </div>
-                        <h5 class="service-title">Second Box Title</h5>
+                        <h5 class="service-title">BASIC</h5>
+                        <h5 class="service-title">$10/mes</h5>
+                        <h5 class="service-title">(Un pago único y anual de $120)</h5>
                         <p>Pellentesque vitae urna ut nisi viverra tristique quis at dolor. In non sodales dolor, id egestas quam. Aliquam erat volutpat. </p>
-                        <a href="#" class="main-button">Discover More</a>
+                        <a href="#" class="main-button">START TRIAL</a>
                     </div>
                     <div class="item service-item">
                         <div class="icon">
                             <i><img src="assets/images/service-icon-03.png" alt=""></i>
                         </div>
-                        <h5 class="service-title">Third Title Box</h5>
+                        <h5 class="service-title">PREMIUM</h5>
+                        <h5 class="service-title">$17/mes</h5>
+                        <h5 class="service-title">(Un pago único y anual de $204)</h5>
                         <p>Quisque finibus libero augue, in ultrices quam dictum id. Aliquam quis tellus sit amet urna tincidunt bibendum.</p>
-                        <a href="#" class="main-button">More Detail</a>
+                        <a href="#" class="main-button">START TRIAL</a>
                     </div>
 
                     </div>
@@ -459,10 +470,25 @@ https://templatemo.com/tm-537-art-factory
     <script src="assets/js/jquery.counterup.min.js"></script>
     <script src="assets/js/imgfix.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
 
     
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
+
+<!-- Tawk to chat -->
+    <script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6186d3af6885f60a50baa278/1fjralpj2';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
 
   </body>
 </html>
