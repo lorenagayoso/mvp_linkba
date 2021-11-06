@@ -1625,12 +1625,27 @@ justify-content: space-evenly;
   padding: 12px 20px;
 }
 
-#pricing-h5{
-  color: white;
-  margin-left: 50%;
-  margin-bottom: 5%;
+.content{
+  margin: auto;
+  width: 60%;
 }
 
-#pricing-h5 h5{
-font-size: xx-large;
+.content h5{
+  font-size: 30px;
+  margin-top: 40px;
+}
+
+.contact-form h5.early-bird-form{
+  color: white;
+  font-size: 30px;
+}
+
+.content p{
+  margin-top: 10px;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+section#early-bird{
+  background-color: #f7f7f7;
 }
